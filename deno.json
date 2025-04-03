@@ -16,9 +16,10 @@
     "check:types": "deno check main.ts && deno check dev.ts && deno check tasks/*.ts",
     "ok": "deno fmt --check && deno lint && deno task check:license --check && deno task check:types && deno task test",
     "cov:gen": "deno coverage coverage --lcov --exclude='.tsx' --output=cov.lcov",
-    "update": "deno run -A -r https://fresh.deno.dev/update .",
+    "update": "deno run -A -r https://fresh.deno.dev/update",
     "manifest": "deno task cli manifest $(pwd)",
-    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -"
+    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
+    "outdated": "deno outdated --update --latest"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
   "imports": {
@@ -29,11 +30,11 @@
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.2",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
-    "tailwindcss": "npm:tailwindcss@3.4.1",
-    "tailwindcss/": "npm:/tailwindcss@3.4.1/",
-    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
-    "$std/": "https://deno.land/std@0.224.0",
-    "stripe": "npm:/stripe@13.5.0",
+    "tailwindcss": "npm:tailwindcss@4.1.1",
+    "tailwindcss/": "npm:/tailwindcss@4.1.1/",
+    "tailwindcss/plugin": "npm:/tailwindcss@4.1.1/plugin.js",
+    "$std/": "https://deno.land/std@0.224.0/",
+    "stripe": "npm:/stripe@18.0.0",
     "tabler_icons_tsx/": "https://deno.land/x/tabler_icons_tsx@0.0.4/tsx/",
     "fresh_charts/": "https://deno.land/x/fresh_charts@0.3.1/"
   },
